@@ -1,0 +1,39 @@
+
+Sistema de venta de productos
+
+La idea es tener una aplicación para la venta de productos a usuarios registrados y logueados en la plataforma.
+
+Unidades o Modelos:
+
+Product
+
+id
+name
+price
+active
+image
+product_category_id
+
+
+
+Product Category
+
+id
+name
+description
+
+
+
+User
+
+id
+firstName
+lastName
+email
+password
+
+
+Implementar los modulos en el orden Indicado (utilizando bootstrap de twitter):
+
+Admin de Categorias de productos (CRUD)
+Admin de productos (CRUD)
