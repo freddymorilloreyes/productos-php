@@ -29,9 +29,10 @@ function getProduct($id)
 {
 	$conectar= new Conexion();
 	$conectar= $conectar->getConexion();
-	$statement=$conectar->prepare("SELECT * FROM Product");
+	$statement=$conectar->prepare("SELECT * FROM Product WHERE id=:id");
+	$statement->bindparam('id', $id);
 	$statement->execute();
-	$arreglo=$statement->fetchAll(PDO::FETCH_ASSOC);
+	$arreglo=$statement->fetch(PDO::FETCH_ASSOC);
 	return $arreglo;
 }
 

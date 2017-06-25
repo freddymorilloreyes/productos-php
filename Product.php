@@ -10,6 +10,7 @@
 <body>
 	<header class="container">
 		<h1>Products</h1>
+		<a href="ObtenerCategoryProduct.php">Categories</a>
 	</header>
 	
 	<div class="container">
@@ -23,24 +24,24 @@
 				<th colspan="2" class="text-center">Acciones</th>
 			</tr>
 			<?php if(count($arreglo)>0 ): ?>
-					<?php foreach ($arreglo as $arrayCategory): ?>
+					<?php foreach ($arreglo as $product): ?>
 				<tr>
-					<td><?= $arrayCategory['name']; ?></td>
-					<td><?= $arrayCategory['price']; ?></td>
-					<td><?= $arrayCategory['active']; ?></td>
-					<td><?= $arrayCategory['image']; ?></td>
-					<td><?= $arrayCategory['product_category_id']; ?></td>
-					<td><a class="btn btn-info btn-xs" href="EditarCategoryProduct.php?id=<?=$arrayCategory['id']?>">Editar</a></td>
-					<td><a class="btn btn-danger btn-xs" href="EliminarCategoryProduct.php?id=<?=$arrayCategory['id']?>">Eliminar</a></td>
+					<td><?= $product['name']; ?></td>
+					<td><?= $product['price']; ?></td>
+					<td><?= $product['active']; ?></td>
+					<td><?= $product['image']; ?></td>
+					<td><?= $product['product_category_id']; ?></td>
+					<td><a class="btn btn-info btn-xs" href="EditarProduct.php?id=<?=$product['id']?>">Editar</a></td>
+					<td><a class="btn btn-danger btn-xs" href="EliminarProduct.php?id=<?=$product['id']?>">Eliminar</a></td>
 				</tr>
 					<?php endforeach ?>
 			<?php else: ?>
 					<tr>
-						<td colspan="4" class="text-center"> No hay Categorias</td>
+						<td colspan="6" class="text-center"> <strong>No hay Productosx</strong></td>
 					</tr>
 			<?php endif ?>
 		</table>
-		<a class="btn btn-primary" href="../NewCategoryProduct.html">New Category</a>
+		<a class="btn btn-primary" href="NewProduct.php">New Product</a>
 	</div>
 	
 	<footer>

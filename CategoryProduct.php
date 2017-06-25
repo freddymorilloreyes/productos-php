@@ -10,6 +10,8 @@
 <body>
 	<header class="container">
 		<h1>Categories</h1>
+		<a href="ObtenerProduct.php">Products</a>
+
 	</header>
 	
 	<div class="container">

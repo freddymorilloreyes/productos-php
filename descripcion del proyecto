@@ -1,4 +1,3 @@
-
 Sistema de venta de productos
 
 La idea es tener una aplicación para la venta de productos a usuarios registrados y logueados en la plataforma.
@@ -6,7 +5,6 @@ La idea es tener una aplicación para la venta de productos a usuarios registrad
 Unidades o Modelos:
 
 Product
-
 id
 name
 price
@@ -15,9 +13,7 @@ image
 product_category_id
 
 
-
 Product Category
-
 id
 name
 description
@@ -25,7 +21,6 @@ description
 
 
 User
-
 id
 firstName
 lastName
