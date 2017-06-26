@@ -11,7 +11,7 @@ if (isset($_POST['user']) && isset($_POST['password'])) {
 		$_SESSION['password']=$infoUser['password'];
 		header('location:../PaginaInicio.php');
 	}else{
-		header('location:allgo.php');
+		header('location:../ErrorAlIniciar.php');
 	}
 
 }

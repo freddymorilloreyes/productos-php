@@ -24,7 +24,7 @@
 				<input type="hidden" name="id" value="<?= $arrayCategory['id']?>">
 			</div>
 			<div class="form-group">
-				<button type="submit" class="btn btn-primary">Enviar</button>
+				<button type="submit" class="btn btn-primary">Update</button>
 			</div>
 			<div class="form-group">
 				<a href="ObtenerCategoryProduct.php">View List</a>
