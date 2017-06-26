@@ -13,13 +13,24 @@ function setUser($firstName, $lastName, $email, $password)
 	$statement->execute();
 }
 
-function getUser()
+function getUsers()
 {
 	$conectar= new Conexion();
 	$conectar= $conectar->getConexion();
 	$statement= $conectar->prepare("SELECT * FROM User");
 	$statement->execute();
 	$arreglo=$statement->fetchAll(PDO::FETCH_ASSOC);
+	return $arreglo;
+}
+function getUser($email, $password)
+{
+	$conectar= new Conexion();
+	$conectar= $conectar->getConexion();
+	$statement= $conectar->prepare("SELECT * FROM User WHERE email=:email AND password=:password");
+	$statement->bindparam(':email', $email);
+	$statement->bindparam(':password', $password);
+	$statement->execute();
+	$arreglo=$statement->fetch(PDO::FETCH_ASSOC);
 	return $arreglo;
 }
 
