@@ -9,7 +9,7 @@ if (isset($_POST['user']) && isset($_POST['password'])) {
 		$_SESSION['lastName']=$infoUser['lastName'];
 		$_SESSION['email']=$infoUser['email'];
 		$_SESSION['password']=$infoUser['password'];
-		header('location:../PaginaInicio.php');
+		header('location:AccionUser.php');
 	}else{
 		header('location:../ErrorAlIniciar.php');
 	}
