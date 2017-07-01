@@ -52,7 +52,6 @@
 				</td>
 			</tr>
 			<?php endforeach ?>
-			<a href="" onclick="javascript:window.close()">Cerrar</a>
 	</table>
 
 	<script src="../js/jquery.js" ></script>

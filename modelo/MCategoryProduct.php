@@ -15,7 +15,7 @@ function getCategoriesProduct()
 {
 	$conectar= new Conexion();
 	$conectar=$conectar->getConexion();	
-	$statement=$conectar->prepare("SELECT * FROM ProductCategory");
+	$statement=$conectar->prepare("SELECT * FROM ProductCategory ORDER BY name ASC");
 	$statement->execute();
 	$arreglo=$statement->fetchAll(PDO::FETCH_ASSOC);
 	return $arreglo;

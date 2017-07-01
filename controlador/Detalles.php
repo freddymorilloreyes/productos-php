@@ -1,5 +1,7 @@
 <?php 
 if (isset($_GET['idProduct']) && isset($_GET['idCategory'])) {
+	session_start();
+	var_dump($_SESSION);
 	require_once'../modelo/MProduct.php';
 	$detallesProduct=getProduct($_GET['idProduct']);
 	//var_dump($detallesProduct);

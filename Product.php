@@ -11,6 +11,7 @@
 	<header class="container">
 		<h1>Products</h1>
 		<a href="ObtenerCategoryProduct.php">Categories</a>
+		<a href="AccionUser.php">Inicio</a>
 	</header>
 	
 	<div class="container">

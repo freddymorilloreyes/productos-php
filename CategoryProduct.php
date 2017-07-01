@@ -11,7 +11,7 @@
 	<header class="container">
 		<h1>Categories</h1>
 		<a href="ObtenerProduct.php">Products</a>
-
+		<a href="AccionUser.php">Inicio</a>
 	</header>
 	
 	<div class="container">
@@ -19,15 +19,16 @@
 			<tr>
 				<th class="text-center">Category</th>
 				<th class="text-center">Description</th>
-				<th colspan="2" class="text-center">Acciones</th>
+				<th colspan="3" class="text-center">Acciones</th>
 			</tr>
 			<?php if(count($arreglo)>0 ): ?>
 					<?php foreach ($arreglo as $arrayCategory): ?>
 				<tr>
 					<td><?= $arrayCategory['name']; ?></td>
 					<td><?= $arrayCategory['description']; ?></td>
-					<td><a class="btn btn-info btn-xs" href="EditarCategoryProduct.php?id=<?=$arrayCategory['id']?>">Editar</a></td>
-					<td><a class="btn btn-danger btn-xs" href="EliminarCategoryProduct.php?id=<?=$arrayCategory['id']?>">Eliminar</a></td>
+					<td><a class="btn btn-info btn-xs" href="NewProduct.php?idSelected=<?=$arrayCategory['id']?>">Add</a></td>
+					<td><a class="btn btn-info btn-xs" href="EditarCategoryProduct.php?id=<?=$arrayCategory['id']?>">Edit</a></td>
+					<td><a class="btn btn-danger btn-xs" href="EliminarCategoryProduct.php?id=<?=$arrayCategory['id']?>">Delete</a></td>
 				</tr>
 					<?php endforeach ?>
 			<?php else: ?>

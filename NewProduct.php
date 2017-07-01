@@ -39,9 +39,14 @@
 				<label class="sr-only" for="product_category_id">category:</label>			
 				<select name="product_category_id" id="product_category_id">
 					<?php foreach ($arregloCategory as $category):?>
-					<option value="<?=$category['id'];?>"> <?= $category['name']; ?></option>
+						<option  
+						<?php if (isset($_GET['idSelected'])):?>
+							<?php if ($_GET['idSelected']==$category['id']): ?>
+								selected 
+							<?php endif ?>
+						<?php endif ?>
+						value="<?=$category['id'];?>"> <?= $category['name']; ?></option>
 					<?php  endforeach ?>
-					
 				</select>
 			</div>
 				
@@ -53,7 +58,7 @@
 			</div>
 		</form>
 	</div>
-
+	<form>
 	<footer>
 		
 	</footer>
