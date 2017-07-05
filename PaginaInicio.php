@@ -18,7 +18,7 @@
 	</header>
 
 		<div class="container">
-		<a href="">hacer una compra</a>
+		<a href="Carrito.php">Ver mi carrito</a>
 		</div>
 
 <p>nuestros products</p>
@@ -40,9 +40,9 @@
 					<?php foreach ($arrayProducts as $products):?>
 						<?php if ($category['id']==$products['product_category_id']): ?>
 						<?php $noDisponible=1 ?>
-						<li>
-							<?=$products['name'];?> <a href="Detalles.php?idProduct=<?=$products['id']?>&idCategory=<?=$category['id']?>">Detalles</a>   <a href="">Agregar al carrito</a> 
-						</li>
+							<li>
+								<?=$products['name'];?> <a href="Detalles.php?idProduct=<?=$products['id']?>&idCategory=<?=$category['id']?>">Detalles</a>						
+							</li>
 						<?php endif ?>
 					<?php endforeach ?>
 						<?php if ($noDisponible==null): ?>
