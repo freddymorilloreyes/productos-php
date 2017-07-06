@@ -25,7 +25,7 @@
 			<button class="btn btn-primary">iniciar</button>
 		</div>
 	</form>
-	<a href="NewUser.html">Registrate</a>
+	<a href="controlador/NewUser.php">Registrate</a>
 </div>	
 	<footer>
 		

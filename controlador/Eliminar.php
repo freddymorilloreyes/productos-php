@@ -3,7 +3,6 @@ if (count($_GET)>0) {
 	require_once'../modelo/Config.php';
 
 	foreach ($_GET as $key => $valorDado) {
-		
 	        $arrayCampos=array('id');
 	        $infoABuscar=array($valorDado);
 		switch ($key) {	

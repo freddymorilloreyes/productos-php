@@ -12,7 +12,7 @@
 		<div class="col-md-6">
 			<h4>Precio: <?=$detallesProduct['price'] ?> bs</h4>
 		
-			<form class="form-inline" action="Carrito.php" method="post">
+			<form class="form-inline" action="Set.php" method="post">
 				<div class="form-group">
 					<label for="cantidad">Cantidad:</label>
 					<input type="number" placeholder="Cantidad" value="1" min="1" name="cantidad">

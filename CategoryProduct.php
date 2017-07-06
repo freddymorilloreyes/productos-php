@@ -26,5 +26,5 @@
 					</tr>
 			<?php endif ?>
 		</table>
-		<a class="btn btn-primary" href="../NewCategoryProduct.html">New Category</a>
+		<a class="btn btn-primary" href="../controlador/NewCategoryProduct.php">New Category</a>
 	</div>

@@ -3,7 +3,7 @@
 	</header>
 	
 	<div class="container">
-		<form class="form-horizontal" action="" method="post">
+		<form class="form-horizontal" action="Set.php" method="post">
 			<div class="form-group">
 				<label class="sr-only" for="name">Name:</label>
 				<input id=name type="text" class="form-control" name="name" placeholder="Name" required>

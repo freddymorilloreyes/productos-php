@@ -5,17 +5,19 @@ require_once('MFunctions.php');
 
 function setRegistro($tabla,$arrayCampos,$infoAInsertar)
 {
-	/*esta función recibirá un string con el nombre de la tabla donde se quiere insertar el registro, un arreglo con los campos a insertar y otro arreglo con la información que será insertada.*/
+	/*esta función recibirá un string con el nombre de la tabla donde se quiere insertar el registro, un arreglo con los campos a insertar y otro arreglo con la información que será insertada. estos arreglos vendrán por post*/
 	$cadenaCampos=generarCadenaCampos($arrayCampos);
 	$cadenaVALUES=generarCadenaVALUES($arrayCampos);
 	$conectar= new Conexion();
 	$conectar= $conectar->getConexion();
 	$statement= $conectar->prepare("INSERT INTO $tabla ($cadenaCampos) VALUES ($cadenaVALUES)");
-	foreach ($arrayCampos as $key => $campo) {
-		$statement->bindparam(':'.$campo,$infoAInsertar[$key]);
+	foreach ($arrayCampos as $campo) {
+		$statement->bindparam(':'.$campo,$infoAInsertar[$campo]);
 	}
 	$statement->execute();
 }
+
+
 
 function getAllTabla($tabla, $stringOrdenarLista=null)
 {
