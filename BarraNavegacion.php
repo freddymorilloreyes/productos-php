@@ -28,7 +28,7 @@
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Acciones <span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><a href="EditarUser.php">Editar Usuario</a></li>
-             <li><a href="#">Eliminar Cuenta</a></li>
+             <li><a href="Eliminar.php?idUser=<?=$_SESSION['id']?>">Eliminar Cuenta</a></li>
             </ul>
           </li>
         <li><a class="glyphicon glyphicon-off" href="Logout.php"></a></li>

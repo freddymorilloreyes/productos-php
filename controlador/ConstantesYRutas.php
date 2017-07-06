@@ -1,1 +1,4 @@
-ConstantesYRutas.php
+<?php 
+
+
+ ?>

@@ -20,8 +20,8 @@
 					<td><?= $product['active']; ?></td>
 					<td> <img  class="center-block img-rounded" width="80px" src="../image/<?=$product['image'];?>" alt="<?=$product['name'];?>"> </td>
 					<td><?= $product['product_category_id']; ?></td>
-					<td><a class="btn btn-info btn-xs" href="EditarProduct.php?id=<?=$product['id']?>">Editar</a></td>
-					<td><a class="btn btn-danger btn-xs" href="EliminarProduct.php?id=<?=$product['id']?>">Eliminar</a></td>
+					<td><a class="btn btn-info btn-xs" href="EditarProduct.php?idProduct=<?=$product['id']?>">Editar</a></td>
+					<td><a class="btn btn-danger btn-xs" href="Eliminar.php?idProduct=<?=$product['id']?>">Eliminar</a></td>
 				</tr>
 					<?php endforeach ?>
 			<?php else: ?>

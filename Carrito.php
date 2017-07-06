@@ -21,7 +21,7 @@
 							<td><?=number_format($product['price'])?> Bs</td>
 							<td><?=$pedido['cantidad'];?></td>
 							<td><?= number_format($totalProductCant)?> Bs</td>
-							<td><a class="btn btn-danger" href="EliminarPedido.php?id=<?=$pedido['id']?>">quitar</a></td>
+							<td><a class="btn btn-danger" href="Eliminar.php?idPedido=<?=$pedido['id']?>">quitar</a></td>
 							<?php $totalAPagar=$totalProductCant+$totalAPagar ?>
 						<?php endif ?>
 					<?php endforeach ?>
