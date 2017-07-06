@@ -1,17 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<link rel="stylesheet" href="../css/bootstrap.min.css">
-	<link rel="stylesheet" href="../css/estilos.css">
-	<title>Category</title>
-</head>
-<body>
-	<header class="container">
+<header class="container">
 		<h1>Categories</h1>
 		<a href="ObtenerProduct.php">Products</a>
-		<a href="AccionUser.php">Inicio</a>
 	</header>
 	
 	<div class="container">
@@ -39,12 +28,3 @@
 		</table>
 		<a class="btn btn-primary" href="../NewCategoryProduct.html">New Category</a>
 	</div>
-	
-
-	<footer>
-		
-	</footer>
-	<script src="js/jquery.js" ></script>
-	<script src="js/bootstrap.min.js"></script>
-</body>
-</html>

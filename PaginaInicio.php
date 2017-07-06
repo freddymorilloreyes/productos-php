@@ -1,32 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<link rel="stylesheet" href="../css/bootstrap.min.css">
-	<link rel="stylesheet" href="../css/estilos.css">
-	<title>Hi! <?=$_SESSION['firstName']?> </title>
-</head>
-<body>
-	<header class="container">
-		<h1>
-			Welcome <?= $_SESSION['firstName']." ". $_SESSION['lastName'] ?>
-		</h1>
-		<a href="Logout.php">Logout</a>
-		<a href="EditarUser.php">Editar Usuario</a>
-			
-	</header>
 
-		<div class="container">
-		<a href="Carrito.php">Ver mi carrito</a>
-		</div>
-
-<p>nuestros products</p>
-
+<div class="container">
+	<h3 class="text-center">Nuestros Productos</h3>
+</div>
 	<table class="table table-striped table-condensed">
 			<tr>
-				<th class="text-center">Category</th>
-				<th class="text-center">Description</th>
+				<th class="text-center">Categoria</th>
+				<th class="text-center">Descripción</th>
 			</tr>
 			<?php foreach ($arrayCategories as $category):?>
 			<tr class="text-center">
@@ -53,8 +32,3 @@
 			</tr>
 			<?php endforeach ?>
 	</table>
-
-	<script src="../js/jquery.js" ></script>
-	<script src="../js/bootstrap.min.js"></script>
-</body>
-</html>

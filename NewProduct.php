@@ -1,19 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<link rel="stylesheet" href="../css/bootstrap.min.css">
-	<link rel="stylesheet" href="../css/estilos.css">
-	<title>New product</title>
-</head>
-<body>
 	<header class="container">
 		<h1>Crear product</h1>
 	</header>
 	
 	<div class="container">
-		<form class="form-horizontal" action="NewProduct.php" method="post">
+		<form class="form-horizontal" action="" method="post">
 			<div class="form-group">
 				<label class="sr-only" for="name">Name:</label>
 				<input id=name type="text" class="form-control" name="name" placeholder="Name" required>
@@ -59,10 +49,3 @@
 		</form>
 	</div>
 	<form>
-	<footer>
-		
-	</footer>
-	<script src="js/jquery.js" ></script>
-	<script src="js/bootstrap.min.js"></script>
-</body>
-</html>

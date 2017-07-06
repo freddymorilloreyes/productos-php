@@ -1,17 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<link rel="stylesheet" href="../css/bootstrap.min.css">
-	<link rel="stylesheet" href="../css/estilos.css">
-	<title>Mi Carrito</title>
-</head>
-<body>
-<header>
-	<h1>Mi Carrito</h1>
-</header>
-<a href="AccionUser.php">Volver a la lista</a>
+
+<div class="container text-right">
+	<a class="btn btn-default" href="AccionUser.php">Volver a la lista</a>
+</div>
 <div class="container">
 	<table class="table" >
 		<tr>
@@ -43,14 +33,9 @@
 				</tr>
 		<?php else: ?>
 				<tr>	
-					<td colspan="5">No tiene nada aun en su carrito</td>
+					<td class="text-center" colspan="5"><h3>No tiene nada aún en su carrito</h3></td>
 				</tr>
 		<?php endif ?>
 	
 	</table>
 </div>
-	<script src="../js/jquery.js" ></script>
-	<script src="../js/bootstrap.min.js"></script>
-
-</body>
-</html>

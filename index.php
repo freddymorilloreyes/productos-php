@@ -27,10 +27,6 @@
 	</form>
 	<a href="NewUser.html">Registrate</a>
 </div>	
-	
-	
-	
-
 	<footer>
 		
 	</footer>

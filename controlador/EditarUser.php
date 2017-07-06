@@ -1,7 +1,10 @@
 <?php 
 session_start();
 if (count($_SESSION)>0) {
+	include_once'../CabeceraHTML.php';
+	include_once'../BarraNavegacion.php';
 	include_once'../EditarUser.php';
+	include_once'../PieHTML.php';
 }
 if (count($_POST)>0) {
 	session_destroy();
