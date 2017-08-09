@@ -1,4 +1,4 @@
-<?php 
+ <?php 
 require_once('Conexion.php');
 require_once('MFunctions.php');
 //($tabla,$campos,$array)
@@ -37,8 +37,8 @@ function getUnRegistro($tabla,$arrayCampos,$infoABuscar)
 	$conectar= new Conexion();
 	$conectar= $conectar->getConexion();
 	$statement= $conectar->prepare("SELECT * FROM $tabla WHERE $cadenaWHERE");
-	foreach ($arrayCampos as $key => $campo) {
-		$statement->bindparam(':'.$campo,$infoABuscar[$key]);
+	foreach ($arrayCampos as $campo) {
+		$statement->bindparam(':'.$campo,$infoABuscar[$campo]);
 	}	
 	$statement->execute();
 	$arreglo=$statement->fetch(PDO::FETCH_ASSOC);
@@ -61,8 +61,8 @@ function deleteUnRegistro($tabla,$arrayCampos,$infoABuscar)
 	$conectar= new Conexion();
 	$conectar=$conectar->getConexion();
 	$statement=$conectar->prepare("DELETE FROM $tabla WHERE $cadenaWHERE");
-	foreach ($arrayCampos as $key => $campo) {
-		$statement->bindparam(':'.$campo,$infoABuscar[$key]);
+	foreach ($arrayCampos as $campo) {
+		$statement->bindparam(':'.$campo,$infoABuscar[$campo]);
 	}	
 	$statement->execute();
 }

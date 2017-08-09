@@ -1,8 +1,8 @@
 	<header class="container">
-		<h1>New User</h1>
+		<h1>Nuevo Usuario</h1>
 	</header>
 	<div class="container">
-		<form action="Set.php" method="post" class="form-horizotal">
+		<form action="" method="post" class="form-horizotal">
 			<div class="form-group">
 				<label class="sr-only" for="firstName" >Firstname:</label>
 				<input type="text" class="form-control" id="firstName" name="firstName" placeholder="FirstName" required>
@@ -19,6 +19,10 @@
 				<label class="sr-only" for="password" >Password</label>
 				<input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
 			</div>
+	
+			<input type="hidden" name=tabla value="User">
+			<!--el input(hidden) es para que a la funcion le llegue a tabla donde va a insertar el registro-->
+
 			<div class="form-group">
 				<button class="btn btn-primary">Registrar</button>
 			</div>

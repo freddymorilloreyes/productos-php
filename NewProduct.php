@@ -1,32 +1,32 @@
 	<header class="container">
-		<h1>Crear product</h1>
+		<h1>Crear producto</h1>
 	</header>
 	
 	<div class="container">
-		<form class="form-horizontal" action="Set.php" method="post">
+		<form class="form-horizontal" action="" method="post">
 			<div class="form-group">
-				<label class="sr-only" for="name">Name:</label>
-				<input id=name type="text" class="form-control" name="name" placeholder="Name" required>
+				<label class="sr-only" for="name">Nombre del Producto:</label>
+				<input id=name type="text" class="form-control" name="name" placeholder="Nombre" required>
 			</div>
 			<div class="form-group">
-				<label class="sr-only" for="price">Price:</label>
-				<input id="price" type="text" class="form-control" name="price" placeholder="Price" required>
+				<label class="sr-only" for="price">Precio:</label>
+				<input id="price" type="text" class="form-control" name="price" placeholder="Precio" required>
 			</div>
 
 			<div class="form-group">
-				<label class="sr-only" for="active">Active:</label>			
+				<label class="sr-only" for="active">Disponible:</label>			
 				<select name="active" id="active">
-					<option>1</option>
-					<option>0</option>
+					<option value="1">Si</option>
+					<option value="0">No</option>
 				</select>
 			</div>
 
 			<div class="form-group">
-				<label class="sr-only" for="image">Image:</label>
+				<label class="sr-only" for="image">Imagen:</label>
 				<input id="image" type="file" name="image" value="subir image" placeholder="url.image">
 			</div>
 			<div class="form-group">
-				<label class="sr-only" for="product_category_id">category:</label>			
+				<label class="sr-only" for="product_category_id">Categoria:</label>			
 				<select name="product_category_id" id="product_category_id">
 					<?php foreach ($arregloCategory as $category):?>
 						<option  
@@ -40,11 +40,14 @@
 				</select>
 			</div>
 				
+			<input type="hidden" name=tabla value="Product">
+			<!--el input(hidden) es para que a la funcion le llegue a tabla donde va a insertar el registro-->
+			
 			<div class="form-group">
 				<button type="submit" class="btn btn-primary">Enviar</button>
 			</div>
 			<div class="form-group">
-				<a href="ObtenerProduct.php">View List Products</a>
+				<a href="MostrarLista.php?accion=listProduct">Lista de Productos</a>
 			</div>
 		</form>
 	</div>

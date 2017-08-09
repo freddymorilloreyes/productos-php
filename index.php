@@ -14,8 +14,8 @@
 <div class="container">
 	<form action="controlador/LogUser.php" method="post" class="form-horizontal">
 		<div class="form-group">
-			<label class="sr-only" for="user">User:</label>
-			<input id=user type="text" class="form-control" name="user" placeholder="User" required>
+			<label class="sr-only" for="email">Email:</label>
+			<input id=email type="text" class="form-control" name="email" placeholder="Email" required>
 		</div>
 		<div class="form-group">
 			<label class="sr-only" for="password">Password:</label>

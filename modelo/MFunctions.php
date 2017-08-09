@@ -63,5 +63,4 @@ function generarCadenaSET($arreglo)
 	return $cadena;
 }
 
-
  ?>

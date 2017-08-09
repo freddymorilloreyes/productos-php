@@ -1,4 +1,4 @@
-	<header class="container">
+ 	<header class="container">
 		<h1>Actualizar Categoria</h1>
 	</header>
 	
@@ -9,15 +9,15 @@
 				<input id=name type="text" class="form-control" name="name" placeholder="Name" required value="<?= $arrayCategory['name']?>">
 			</div>
 			<div class="form-group">
-				<label class="sr-only" for="description">Description:</label>
-				<textarea id="description" class="form-control" name="description" cols="30" rows="10" placeholder="Description" required><?= $arrayCategory['description']?></textarea>
+				<label class="sr-only" for="description">Descripción:</label>
+				<textarea id="description" class="form-control" name="description" cols="30" rows="10" placeholder="Descrición" required><?= $arrayCategory['description']?></textarea>
 				<input type="hidden" name="id" value="<?= $arrayCategory['id']?>">
 			</div>
 			<div class="form-group">
-				<button type="submit" class="btn btn-primary">Update</button>
+				<button type="submit" class="btn btn-primary">Actualizar</button>
 			</div>
 			<div class="form-group">
-				<a href="ObtenerCategoryProduct.php">View List</a>
+				<a href="MostrarLista.php?accion=listCategories">Lista de Categorias</a>
 			</div>
 		</form>
 	</div>

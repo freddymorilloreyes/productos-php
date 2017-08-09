@@ -1,34 +1,32 @@
 <?php 
 if (count($_GET)>0) {
 	require_once'../modelo/Config.php';
-
-	foreach ($_GET as $key => $valorDado) {
-	        $arrayCampos=array('id');
-	        $infoABuscar=array($valorDado);
-		switch ($key) {	
-	    case 'idProduct':
-	        $tabla='Product';
-			deleteUnRegistro($tabla,$arrayCampos,$infoABuscar);
-			header('location:ObtenerProduct.php');
+	$accion= array_pop($_GET);//para quitar el accion del arreglo get, pues no me sirve que este allí 	
+	$arrayCampos=array_keys($_GET);//para usar las claves como valores de un nuevo array
+	switch ($accion) {	
+	    case 'deleteCategory':
+	        $tabla='ProductCategory';
 	        break;
-	    case 'idCategory':
-			$tabla='ProductCategory';
-			deleteUnRegistro($tabla,$arrayCampos,$infoABuscar);
-			header('location:ObtenerCategoryProduct.php');
+	    case 'deleteProduct':
+			$tabla='Product';
 	        break;
-	    case 'idPedido':
-			$tabla='Pedidos';
-			deleteUnRegistro($tabla,$arrayCampos,$infoABuscar);
-			header('location:Carrito.php');
-	        break;
-	    case 'idUser':
+	    case 'deleteUser':
 			$tabla='User';
-			deleteUnRegistro($tabla,$arrayCampos,$infoABuscar);
-			header('location:../index.php');
 	        break;
-		}
-
 	}
-
+	deleteUnRegistro($tabla,$arrayCampos,$_GET);
 }
+switch ($accion) {	
+	    case 'deleteCategory':
+			$redirrecionarA='listCategories';
+	        break;
+	    case 'deleteProduct':
+			$redirrecionarA='listProduct';
+	        break;
+	    case 'deleteUser':
+			$redirrecionarA='listUsers';
+			break;
+	}
+	header('location:MostrarLista.php?accion='.$redirrecionarA);
+
  ?>
