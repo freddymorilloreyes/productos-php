@@ -1,7 +1,11 @@
+ <?php 
+	include_once'CabeceraHTML.php';
+	include_once'BarraNavegacion.php';
+?>
  	<header class="container">
 		<h1>Productos</h1>
-		<a href="MostrarLista.php?accion=listCategories">Categorias</a>
-		<a href="MostrarLista.php?accion=listUsers">Usuarios</a>
+		<a href="MostrarCategoryProduct.php">Categorías</a> 
+		<a href="MostrarUser.php">Usuarios</a>
 	</header>
 	<div class="container">
 		<table class="table table-striped table-condensed">
@@ -10,7 +14,7 @@
 				<th class="text-center">Precio</th>
 				<th class="text-center">Activo</th>
 				<th class="text-center">Imagen</th>
-				<th class="text-center">Categoria</th>
+				<th class="text-center">Categoría</th>
 				<th colspan="2" class="text-center">Acciones</th>
 			</tr>
 			<?php if(count($arreglo)>0): ?>
@@ -31,8 +35,8 @@
 						<?php endforeach ?>
 					</td>
 					
-					<td><a class="btn btn-info btn-xs" href="EditarProduct.php?idProduct=<?=$product['id']?>">Editar</a></td>
-					<td><a class="btn btn-danger btn-xs" href="Eliminar.php?id=<?=$product['id']?>&accion=deleteProduct">Eliminar</a></td>
+					<td><a class="btn btn-info btn-xs" href="EditarProduct.php?id=<?=$product['id']?>">Editar</a></td>
+					<td><a class="btn btn-danger btn-xs" href="EliminarProduct.php?id=<?=$product['id']?>">Eliminar</a></td>
 				</tr>
 					<?php endforeach ?>
 			<?php else: ?>
@@ -41,5 +45,6 @@
 					</tr>
 			<?php endif ?>
 		</table>
-		<a class="btn btn-primary" href="Crear.php?accion=newProduct">Agregar Producto</a>
+		<a class="btn btn-primary" href="CrearProduct.php">Agregar Producto</a>
 	</div>
+<?php 	include_once'PieHTML.php';?>	

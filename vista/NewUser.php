@@ -1,3 +1,7 @@
+ <?php 
+	include_once'CabeceraHTML.php';
+	include_once'BarraNavegacion.php';
+ ?>
 	<header class="container">
 		<h1>Nuevo Usuario</h1>
 	</header>
@@ -19,15 +23,12 @@
 				<label class="sr-only" for="password" >Password</label>
 				<input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
 			</div>
-	
-			<input type="hidden" name=tabla value="User">
-			<!--el input(hidden) es para que a la funcion le llegue a tabla donde va a insertar el registro-->
-
 			<div class="form-group">
 				<button class="btn btn-primary">Registrar</button>
 			</div>
 		</form>
 	</div>
 	<div class="container">
-		<a class="btn btn-default" href="index.php">iniciar sesion</a>
+		<a class="btn btn-default" href="../vista/index.php">iniciar sesión</a>
 	</div>
+<?php 	include_once'PieHTML.php';?>	

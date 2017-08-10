@@ -1,5 +1,9 @@
+<?php 
+include_once'CabeceraHTML.php';
+include_once'BarraNavegacion.php';
+?>
 	<header class="container">
-		<h1>Edit product</h1>
+		<h1>Actualizar Producto</h1>
 	</header>
 	
 	<div class="container">
@@ -16,8 +20,8 @@
 			<div class="form-group">
 				<label class="sr-only" for="active">Active:</label>			
 				<select name="active" id="active">
-					<option <?php if ($product['active']==1):?> selected <?php endif ?>>1</option>
-					<option <?php if ($product['active']==0):?> selected <?php endif ?>>0</option>
+					<option value="1" <?php if ($product['active']==1):?> selected <?php endif ?>>Si</option>
+					<option value="0" <?php if ($product['active']==0):?> selected <?php endif ?>>No</option>
 				</select>
 			</div>
 
@@ -47,3 +51,4 @@
 			</div>
 		</form>
 	</div>
+	 <?php include_once'PieHTML.php'; ?>

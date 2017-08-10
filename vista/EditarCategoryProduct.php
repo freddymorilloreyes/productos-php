@@ -1,3 +1,7 @@
+<?php 
+include_once'CabeceraHTML.php';
+include_once'BarraNavegacion.php';
+ ?>
  	<header class="container">
 		<h1>Actualizar Categoria</h1>
 	</header>
@@ -14,10 +18,11 @@
 				<input type="hidden" name="id" value="<?= $arrayCategory['id']?>">
 			</div>
 			<div class="form-group">
-				<button type="submit" class="btn btn-primary">Actualizar</button>
+			<button type="submit" class="btn btn-primary">Actualizar</button>
 			</div>
 			<div class="form-group">
-				<a href="MostrarLista.php?accion=listCategories">Lista de Categorias</a>
+				<a href="MostrarCategoryProduct.php">Lista de Categorias</a>
 			</div>
 		</form>
 	</div>
+<?php include_once'PieHTML.php'; ?>

@@ -1,7 +1,11 @@
-<header class="container">
-		<h1>Categorias</h1>
-		<a href="MostrarLista.php?accion=listProduct">Productos</a>
-		<a href="MostrarLista.php?accion=listUsers">Usuarios</a>
+<?php 
+	include_once'CabeceraHTML.php';
+	include_once'BarraNavegacion.php';
+?>
+ <header class="container">
+		<h1>Categorías</h1>
+		<a href="MostrarProduct.php">Productos</a>
+	<a href="MostrarUser.php">Usuarios</a>
 
 </header>
 	
@@ -18,15 +22,16 @@
 					<td><?= $arrayCategory['name']; ?></td>
 					<td><?= $arrayCategory['description']; ?></td>
 					<td><a class="btn btn-info btn-xs" href="NewProduct.php?idSelected=<?=$arrayCategory['id']?>">Agregar un Producto</a></td>
-					<td><a class="btn btn-info btn-xs" href="Editar.php?id=<?=$arrayCategory['id']?>&accion=editCategory">Editar</a></td>
-					<td><a class="btn btn-danger btn-xs" href="Eliminar.php?id=<?=$arrayCategory['id']?>&accion=deleteCategory">Borrar</a></td>
+					<td><a class="btn btn-info btn-xs" href="EditarCategoryProduct.php?id=<?=$arrayCategory['id']?>">Editar</a></td>
+					<td><a class="btn btn-danger btn-xs" href="EliminarCategoryProduct.php?id=<?=$arrayCategory['id']?>">Borrar</a></td>
 				</tr>
 					<?php endforeach ?>
 			<?php else: ?>
 					<tr>
-						<td colspan="4" class="text-center"> No hay Categorias</td>
+						<td colspan="4" class="text-center"> No hay Categorías</td>
 					</tr>
 			<?php endif ?>
 		</table>
-		<a class="btn btn-primary" href="Crear.php?accion=newCategory">Categoria nueva</a>
+		<a class="btn btn-primary" href="CrearCategoryProduct.php">Categoría nueva</a>
 	</div>
+<?php 	include_once'PieHTML.php';?>	

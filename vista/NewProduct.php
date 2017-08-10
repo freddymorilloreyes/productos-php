@@ -1,4 +1,8 @@
-	<header class="container">
+ <?php 
+	include_once'CabeceraHTML.php';
+	include_once'BarraNavegacion.php';
+ ?>
+ 	<header class="container">
 		<h1>Crear producto</h1>
 	</header>
 	
@@ -38,17 +42,14 @@
 						value="<?=$category['id'];?>"> <?= $category['name']; ?></option>
 					<?php  endforeach ?>
 				</select>
-			</div>
-				
-			<input type="hidden" name=tabla value="Product">
-			<!--el input(hidden) es para que a la funcion le llegue a tabla donde va a insertar el registro-->
-			
+			</div>			
 			<div class="form-group">
 				<button type="submit" class="btn btn-primary">Enviar</button>
 			</div>
 			<div class="form-group">
-				<a href="MostrarLista.php?accion=listProduct">Lista de Productos</a>
+				<a href="MostrarProduct.php">Lista de Productos</a>
 			</div>
 		</form>
 	</div>
 	<form>
+<?php 	include_once'PieHTML.php';?>	

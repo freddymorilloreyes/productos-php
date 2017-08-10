@@ -1,4 +1,8 @@
-	<header class="container">
+<?php 
+include_once'CabeceraHTML.php';
+include_once'BarraNavegacion.php';
+?> 
+ 	<header class="container">
 		<h1>Edit User</h1>
 	</header>
 	<div class="container">
@@ -25,3 +29,4 @@
 			</div>
 		</form>
 	</div>
+	<?php include_once'PieHTML.php'; ?>
