@@ -51,4 +51,4 @@ include_once'BarraNavegacion.php';
 			</div>
 		</form>
 	</div>
-	 <?php include_once'PieHTML.php'; ?>
+<?php include_once'PieHTML.php'; ?>

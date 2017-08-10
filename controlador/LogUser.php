@@ -1,4 +1,4 @@
- <?php 
+<?php 
  var_dump($_POST);
 if (isset($_POST['email']) && isset($_POST['password'])) {
 	session_start();
@@ -11,10 +11,12 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
 		$_SESSION['lastName']=$infoUser['lastName'];
 		$_SESSION['email']=$infoUser['email'];
 		$_SESSION['password']=$infoUser['password'];
-		//header('location:AccionUser.php');
-	}//else{
-		//header('location:../ErrorAlIniciar.php');	}
+		header('location:AccionUser.php');
+	}else{
+		
+		header('location:../vista/DatosIncorrectos.php');	
+	}
 
-	var_dump($infoUser, $_SESSION);
 }
+
  ?>

@@ -12,7 +12,7 @@
 		<h1>Iniciar sesión</h1>
 	</header>
 <div class="container">
-	<form action="controlador/LogUser.php" method="post" class="form-horizontal">
+	<form action="../controlador/LogUser.php" method="post" class="form-horizontal">
 		<div class="form-group">
 			<label class="sr-only" for="email">Email:</label>
 			<input id=email type="text" class="form-control" name="email" placeholder="Email" required>
@@ -25,7 +25,7 @@
 			<button class="btn btn-primary">iniciar</button>
 		</div>
 	</form>
-	<a href="controlador/NewUser.php">Registrate</a>
+	<a href="../controlador/CrearUser.php">Registrate</a>
 </div>	
 	<footer>
 		

@@ -1,4 +1,9 @@
 <?php 
+	//para que no puedan ingresar sin ser edministradores
+	session_start();
+	require_once'VerificarInicioDeSession.php';
+	ValidarInicioDeSessionAdministrador($_SESSION); 
+
 	require_once('../modelo/Config.php');
 
 //esto es para pintar la informacion en el form
