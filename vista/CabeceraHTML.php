@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="../css/bootstrap.min.css">
 	<link rel="stylesheet" href="../css/estilos.css">
 	<title>
-	  	<?php if (isset($_SESSION)): ?>
+	  	<?php if (!empty($_SESSION)): ?>
 			¡Hola! <?=$_SESSION['firstName']?> 
   		<?php endif ?>
 	</title>

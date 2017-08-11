@@ -1,8 +1,24 @@
 <?php 
-define('TABLAUSERS', 'User');
+//TABLAS
+define('TABLAUSER', 'User');
 define('TABLAPRODUCT', 'Product');
-//define(TABLA, value);
+define('TABLACATEGORYPRODUCT', 'ProductCategory');
+define('TABLAPEDIDOS', 'Pedidos');
+define('TABLACARRITO', 'Carrito');
+//CARPETAS
+define('CARPETAVISTA', 'vista');
+//ARCHIVOS
 
-echo 'hola '.TABLAPRODUCT;
 
+
+
+
+
+
+function crearStringRutas($arregloRuta)
+{
+	if (count($arregloRuta)==1) {
+		
+	}
+}
  ?>

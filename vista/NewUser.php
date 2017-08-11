@@ -28,7 +28,4 @@
 			</div>
 		</form>
 	</div>
-	<div class="container">
-		<a class="btn btn-default" href="../vista/index.php">iniciar sesión</a>
-	</div>
 <?php 	include_once'PieHTML.php';?>	

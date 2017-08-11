@@ -1,12 +1,9 @@
 <?php 
 	session_start(); 
-	if (count($_SESSION)>0){
 		require_once'../modelo/Config.php';
-		$arrayCategories=getAllTabla('ProductCategory');
-		$arrayProducts=getAllTabla('Product');
+		require_once'ConstantesYRutas.php';
+		echo TABLAPRODUCT;
+		$arrayCategories=getAllTabla(TABLACATEGORYPRODUCT);
+		$arrayProducts=getAllTabla(TABLAPRODUCT);
 		include_once'../vista/ProductosEnVenta.php';
-	}else{
-		echo "primero inicie sesion";
-	}
-
  ?>
