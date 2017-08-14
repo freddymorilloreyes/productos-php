@@ -15,7 +15,7 @@ include_once'BarraNavegacion.php';
 		</div>
 		<div class="col-md-4">
 			<h4>Precio: <?=$detallesProduct['price'] ?> bs</h4>
-		
+ 		<?php if (!empty($_SESSION)): ?>	
 			<form class="form-vertical" action="agregarProductAlCarrito.php" method="post">
 				<div class="form-group">
 					<label for="cantidad">Cantidad:</label>
@@ -26,6 +26,10 @@ include_once'BarraNavegacion.php';
 					<input type="submit" value="Agregar al Carrito">
 				</div>
 			</form>
+		<?php else: ?>
+			<p>Para Comprar <a href="../vista/index.php">Incia sesión</a>.
+			 <p/><p>¿Aún no tienes cuenta? <a href="CrearUser.php">Registrate</a></p>
+		<?php endif ?>
 		
 		</div>
 	</div>

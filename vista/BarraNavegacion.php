@@ -32,7 +32,7 @@
         </div><!-- /.navbar-collapse -->
       <?php endif ?>
       <?php if (empty($_SESSION)): ?>
-        <a class="btn btn-xs navbar-right" href="../vista/index.php">Inicia Sessión</a>
+        <a class="btn btn-xs navbar-right" href="../vista/index.php">Inicia Sesión</a>
         <a class="btn btn-xs navbar-right" href="../controlador/CrearUser.php">Registrate</a>
       <?php endif ?>
     </div><!-- /.container-fluid -->

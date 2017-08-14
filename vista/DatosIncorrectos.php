@@ -14,7 +14,7 @@
 </header>
 <body>
 	<div class="container">
-		<p>Algunos de los datos suministrados no son correctos </p><a href="../vista/index.php">Iniciar Session</a>
+		<p>Algunos de los datos suministrados no son correctos </p><a href="../vista/index.php">Iniciar Sesión</a>
 		<a href="CrearUser.php">Registrate</a>
 	</div>
 	<script src="../js/jquery.js" ></script>

@@ -4,7 +4,6 @@
 	session_start();
 	require_once crearStringRuta(array(VERIFICARINICIODESESSION));
 	VerificarInicioDeSession($_SESSION); 
-
 	include_once crearStringRuta(array(SALIRDECARP,CARPETAMODELO,CONFIG));
 	//para cargar los productos que ya estan en el carrito la idea es comparar con los que van a ingresar
 	$productoYaEnElCarrito=getAllTabla(TABLACARRITO);
