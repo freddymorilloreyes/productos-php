@@ -1,6 +1,6 @@
  <?php 
-require_once('Conexion.php');
-require_once('MFunctions.php');
+require_once('conexion.php');
+require_once('modelFunctions.php');
 //($tabla,$campos,$array)
 
 function crearRegistro($tabla,$arrayCampos,$infoAInsertar)

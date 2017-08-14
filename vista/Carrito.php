@@ -1,31 +1,31 @@
- <?php 
+  <?php 
 include_once'CabeceraHTML.php';
 include_once'BarraNavegacion.php';
  ?>
-<div class="container text-right">
-	<a class="btn btn-default" href="AccionUser.php">Volver a la lista</a>
+<div class="container text-center">
+	<a class="btn btn-default " href="AccionUser.php">Ver Productos</a>
 </div>
 <div class="container">
 	<table class="table" >
 		<tr>
-			<th>Product</th>
+			<th>Producto</th>
 			<th>Precio</th>
 			<th>Cantidad</th>
 			<th>Subtotal</th>
 			<th></th>
 		</tr>
-		<?php if (count($arrayPedidos)): ?>
+		<?php if (count($arrayArticulosEnElCarrito)): ?>
 			<?php $totalAPagar=0 ?>
-			<?php foreach ($arrayPedidos as $pedido): ?>
+			<?php foreach ($arrayArticulosEnElCarrito as $articulosEnElCarrito): ?>
 				<tr>
 					<?php foreach ($arrayProduct as $product): ?>
-						<?php if ($pedido['product_id']==$product['id']): ?>
-							<?php $totalProductCant= $product['price']*$pedido['cantidad']; ?>
+						<?php if ($articulosEnElCarrito['product_id']==$product['id']): ?>
+							<?php $totalProductCant= $product['price']*$articulosEnElCarrito['cantidad']; ?>
 							<td><?= $product['name'] ?></td>
 							<td><?=number_format($product['price'])?> Bs</td>
-							<td><?=$pedido['cantidad'];?></td>
+							<td><?=$articulosEnElCarrito['cantidad'];?></td>
 							<td><?= number_format($totalProductCant)?> Bs</td>
-							<td><a class="btn btn-danger" href="Eliminar.php?idPedido=<?=$pedido['id']?>">quitar</a></td>
+							<td><a class="btn btn-danger" href="EliminarProductoDelCarrito.php?id=<?=$articulosEnElCarrito['id']?>">quitar</a></td>
 							<?php $totalAPagar=$totalProductCant+$totalAPagar ?>
 						<?php endif ?>
 					<?php endforeach ?>
@@ -37,7 +37,7 @@ include_once'BarraNavegacion.php';
 				</tr>
 		<?php else: ?>
 				<tr>	
-					<td class="text-center" colspan="5"><h3>No tiene nada aún en su carrito</h3></td>
+					<td class="text-center" colspan="5"><h3>No hay productos en el carrito</h3></td>
 				</tr>
 		<?php endif ?>
 	

@@ -44,7 +44,7 @@
 				</select>
 			</div>			
 			<div class="form-group">
-				<button type="submit" class="btn btn-primary">Enviar</button>
+				<button type="submit" class="btn btn-primary">Agregar</button>
 			</div>
 			<div class="form-group">
 				<a href="MostrarProduct.php">Lista de Productos</a>
@@ -52,4 +52,4 @@
 		</form>
 	</div>
 	<form>
-<?php 	include_once'PieHTML.php';?>	
+<?php 	include_once'PieHTML.php';?>

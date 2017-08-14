@@ -4,8 +4,6 @@
 ?>
 <header class="container">
 		<h1>Usuarios</h1>
-		<a href="MostrarProduct.php">Productos</a> 
-		<a href="MostrarCategoryProduct.php">Categorias</a> 
 	</header>
 	<div class="container">
 		<table class="table table-striped table-condensed">

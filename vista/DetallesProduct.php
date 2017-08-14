@@ -16,7 +16,7 @@ include_once'BarraNavegacion.php';
 		<div class="col-md-4">
 			<h4>Precio: <?=$detallesProduct['price'] ?> bs</h4>
 		
-			<form class="form-vertical" action="Set.php" method="post">
+			<form class="form-vertical" action="agregarProductAlCarrito.php" method="post">
 				<div class="form-group">
 					<label for="cantidad">Cantidad:</label>
 					<input type="number" placeholder="Cantidad" value="1" min="1" name="cantidad">

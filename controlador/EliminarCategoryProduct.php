@@ -1,6 +1,7 @@
  <?php 
-	require_once'../modelo/Config.php';
+	require_once'constantesYRutas.php';
+	include_once crearStringRuta(array(SALIRDECARP,CARPETAMODELO,CONFIG));
 	$arrayCampos=array_keys($_GET);//para usar las claves como valores de un nuevo array
-	deleteUnRegistro('ProductCategory',$arrayCampos,$_GET);
-	header('location:MostrarCategoryProduct.php');
+	deleteUnRegistro(TABLAPRODUCTCATEGORY,$arrayCampos,$_GET);
+		crearHeader(array(MOSTRARCATEGORYPRODUCT));
  ?>

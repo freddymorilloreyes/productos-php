@@ -1,16 +1,18 @@
 <?php 
+	require_once'constantesYRutas.php';
+
 function VerificarInicioDeSession($datos)
 {	
 	if (empty($datos)) {
-		header('location:ErrorAlIniciar.php');
+		crearHeader(array(ERRORALINICIAR));	
 	}	
 }
 function ValidarInicioDeSessionAdministrador($datos)
 {
 	if (empty($datos)) {
-		header('location:ErrorAlIniciar.php');
+		crearHeader(array(ERRORALINICIAR));	
 	}elseif (!($datos['email']=='root' && $datos['password']=='abdc1234')) {
-			header('location:AccionUser.php');
+		crearHeader(array(ACCIONUSER));	
 	}
 }
 

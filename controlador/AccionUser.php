@@ -1,9 +1,9 @@
 <?php 
 	session_start(); 
-		require_once'../modelo/Config.php';
-		require_once'ConstantesYRutas.php';
-		echo TABLAPRODUCT;
-		$arrayCategories=getAllTabla(TABLACATEGORYPRODUCT);
+		require_once'constantesYRutas.php';
+		include_once crearStringRuta(array(SALIRDECARP,CARPETAMODELO,CONFIG));
+		$arrayCategories=getAllTabla(TABLAPRODUCTCATEGORY);
 		$arrayProducts=getAllTabla(TABLAPRODUCT);
-		include_once'../vista/ProductosEnVenta.php';
+		include_once crearStringRuta(array(SALIRDECARP,CARPETAVISTA,PRODUCTENVENTA));
+
  ?>

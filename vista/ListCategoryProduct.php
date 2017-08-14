@@ -4,9 +4,6 @@
 ?>
  <header class="container">
 		<h1>Categorías</h1>
-		<a href="MostrarProduct.php">Productos</a>
-	<a href="MostrarUser.php">Usuarios</a>
-
 </header>
 	
 	<div class="container">
@@ -21,7 +18,7 @@
 				<tr>
 					<td><?= $arrayCategory['name']; ?></td>
 					<td><?= $arrayCategory['description']; ?></td>
-					<td><a class="btn btn-info btn-xs" href="NewProduct.php?idSelected=<?=$arrayCategory['id']?>">Agregar un Producto</a></td>
+					<td><a class="btn btn-info btn-xs" href="CrearProduct.php?idSelected=<?=$arrayCategory['id']?>">Agregar un Producto</a></td>
 					<td><a class="btn btn-info btn-xs" href="EditarCategoryProduct.php?id=<?=$arrayCategory['id']?>">Editar</a></td>
 					<td><a class="btn btn-danger btn-xs" href="EliminarCategoryProduct.php?id=<?=$arrayCategory['id']?>">Borrar</a></td>
 				</tr>
